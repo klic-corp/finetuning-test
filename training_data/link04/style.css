@@ -1,0 +1,154 @@
+.MC_box {
+  width: 1600px;
+  margin: 0 auto;
+  font-family: 'pretendard';
+}
+
+/* 퀵링크 */
+.Quick_Link {
+  position: relative;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: end;
+}
+
+.Quick_Link .tit_box {
+  width: 15rem;
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #fff;
+  background: #a41d19 url('/upload/cntntsFile/uimoa/img_d436efff-4826-454d-88c6-410ef2dd809d1716787747513.png') no-repeat left top;
+  font-weight: 600;
+  border-radius: 0 2.3rem 0 0;
+  padding: 0 4rem 0 5.8rem;
+}
+
+.Quick_Link .list_box {
+  position: relative;
+  width: calc(100% - 15rem);
+  padding: 2.2rem 3.5rem 0 3.5rem;
+}
+
+.Quick_Link .list_box .slick-list {
+  padding-top: 0.8rem;
+}
+
+.Quick_Link .list_box li a {
+  display: block;
+  text-align: center;
+}
+
+.Quick_Link .list_box li a::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1.5rem;
+  height: 3px;
+  background: #a41d19;
+  transform: translateX(-50%);
+  opacity: 0;
+  content: "";
+}
+
+.Quick_Link .list_box li a .img {
+  margin-bottom: 0.8rem;
+}
+
+.Quick_Link .list_box li a .txt {
+  font-size: 0.9rem;
+  color: #111;
+  padding: 0 1.2rem;
+  word-break: keep-all;
+  line-height: 1.2rem;
+}
+
+.Quick_Link .list_box .control>a {
+  position: absolute;
+  top: calc(50% - 1.3rem);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #555;
+  font-size: 1.25rem;
+  box-shadow: 8px 8px 15px rgba(181, 181, 181, 0.55);
+  border-radius: 50%;
+}
+
+.Quick_Link .list_box .control>a.prev {
+  left: -1.5rem;
+}
+
+.Quick_Link .list_box .control>a.next {
+  right: 0;
+}
+
+.Quick_Link .list_box .slick-dots {
+  display: none !important;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.Quick_Link .list_box .slick-dots li {
+  position: relative;
+  width: 0.3rem;
+  height: 0.3rem;
+  display: inline-block;
+  margin: 0 0.15rem;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.Quick_Link .list_box .slick-dots li.slick-active {
+  background: #a41d19;
+}
+
+.Quick_Link .list_box .slick-dots li button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  padding: 0;
+}
+
+/* 퀵링크 : active */
+.Quick_Link .list_box li a:hover,
+.Quick_Link .list_box li a:focus {
+  transform: translateY(-0.8rem);
+}
+
+.Quick_Link .list_box li a:hover::before,
+.Quick_Link .list_box li a:focus::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0.4rem);
+}
+
+.Quick_Link .list_box li a:hover .txt,
+.Quick_Link .list_box li a:focus .txt {
+  color: #a41d19;
+  font-weight: 600;
+}
+
+.Quick_Link .list_box .control>a:hover,
+.Quick_Link .list_box .control>a:focus {
+  background: #111;
+  color: #fff;
+  box-shadow: none;
+}
+
+.Quick_Link .list_box li a,
+.Quick_Link .list_box li a::before,
+.Quick_Link .list_box li a .txt,
+.Quick_Link .list_box .control>a {
+  transition: all 0.3s;
+}

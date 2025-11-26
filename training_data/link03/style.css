@@ -1,0 +1,97 @@
+/* link */
+.link {
+  position: relative;
+}
+
+.link::before {
+  content: '';
+  display: block;
+  background: url('/upload/cntntsFile/uimoa/img_34d129af-d838-4465-9b8a-f7c46d1386551716862648611.png');
+  width: 300%;
+  height: calc(100% + 6.15rem);
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.link ul {
+  display: flex;
+  padding: 3.4rem 0;
+  justify-content: center;
+}
+
+.link ul li {
+  position: relative;
+  width: 14.4rem;
+}
+
+.link ul li+li {
+  margin-left: 12rem;
+}
+
+.link ul li+li::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: #bb7271;
+  position: absolute;
+  top: 0;
+  left: -6rem;
+}
+
+.link ul li a {
+  display: block;
+  color: #fff;
+  padding: 0.5rem 3.2rem 0.5rem 0;
+}
+
+.link ul li a::before {
+  content: '';
+  display: block;
+  width: 3.05rem;
+  height: 3.05rem;
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0;
+  transition: all 0.15s;
+}
+
+.link ul li:nth-child(1) a::before {
+  background: url('/upload/cntntsFile/uimoa/img_c47a8590-39ee-466c-ae06-b68c9cfada921716862648611.png') no-repeat center / contain;
+}
+
+.link ul li:nth-child(2) a::before {
+  background: url('/upload/cntntsFile/uimoa/img_5018b3b7-fa54-4073-a02e-ad42cf248ae31716862648611.png') no-repeat center / contain;
+}
+
+.link ul li:nth-child(3) a::before {
+  background: url('/upload/cntntsFile/uimoa/img_5eda5e27-c8f9-451c-be95-1507c60a7b051716862648611.png') no-repeat center / contain;
+}
+
+.link ul li a p {
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: all 0.15s;
+}
+
+.link ul li a span {
+  display: block;
+  max-height: 2.5rem;
+  overflow: hidden;
+  line-height: 1.25rem;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  word-break: keep-all;
+}
+
+.link ul li a:hover::before,
+.link ul li a:focus::before {
+  transform: translateY(-4px);
+}
+
+.link ul li a:hover p,
+.link ul li a:focus p {
+  box-shadow: inset 0 -10px 0 rgba(255, 255, 255, 0.2);
+}

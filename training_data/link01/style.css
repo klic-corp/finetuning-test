@@ -1,0 +1,160 @@
+.archive-title {
+  opacity: 1.0;
+  margin-bottom: 1rem;
+}
+
+.archive-title p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.archive-title p span {
+  display: inline-block;
+  vertical-align: top;
+  animation: spreadTitle 5s forwards;
+}
+
+.archive-list {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.archive-list a {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.archive-list a:after {
+  content: '';
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #fff;
+  right: -2.8rem;
+  top: calc(50% - 1.5rem);
+  transform: translate(0, -50%);
+}
+
+.archive-list a:last-child:after {
+  display: none;
+}
+
+.archive-list a span {
+  position: relative;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+  width: 6rem;
+  height: 6rem;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.archive-list a span:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid #e6e6e6;
+  content: '';
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.archive-list a span img {
+  position: relative;
+  z-index: 1;
+}
+
+.archive-list a em {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.archive-list a:hover span:after {
+  background: #9e1914;
+  border-color: #9e1914;
+}
+
+.archive-list a:hover span:before,
+.archive-list a:focus span:after {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: #ad683f;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  z-index: 0;
+  animation: spreadFlat 0.5s forwards linear;
+}
+
+.archive-list a:hover em:before,
+.archive-list a:focus em:before {
+  width: 100%;
+}
+
+.archive-list a:hover span,
+.archive-list a:focus span {
+  color: #c0392b;
+}
+
+.archive-list a:hover span:after,
+.archive-list a:focus span:after {
+  border-color: #c0392b;
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+.section-list {
+  height: 25rem;
+  background: url('/upload/cntntsFile/uimoa/img_dc1badd5-a7ff-42e7-99bb-171cf9a826e81716946418416.png') no-repeat 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes spreadTitle {
+  from {
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+  }
+
+  to {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+@keyframes spreadFlat {
+  0% {
+    -webkit-transform: scale(0) translate(-15%, -90%);
+    transform: scale(0) translate(-15%, -90%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: scale(1) translate(-15%, -90%);
+    transform: scale(1) translate(-15%, -90%);
+    opacity: 1;
+  }
+}

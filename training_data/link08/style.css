@@ -1,0 +1,253 @@
+.MC_box6 {
+  width: 530px;
+  height: 21.5rem;
+  background-color: #0a326f;
+  margin: 0 auto;
+}
+
+/* 바로가기2 */
+
+/* common */
+.red {
+  color: #a40e17;
+}
+
+.blue {
+  color: #0a326f;
+}
+
+.heading {
+  color: #000;
+  font-family: 'GmarketSans';
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* 바로가기2 */
+.link2 {
+  padding: 2.25rem 2.3rem 0 2.3rem;
+}
+
+.link2 h2.heading {
+  position: relative;
+  color: #fff;
+  display: inline-block;
+}
+
+.link2 h2.heading::after {
+  content: '';
+  display: block;
+  width: 0.95rem;
+  height: 1.3rem;
+  background: url(/upload/cntntsFile/uimoa/img_70851c1a-414a-425d-89ce-4c9e17917f241716451414535.png) no-repeat center / contain;
+  position: absolute;
+  right: -2rem;
+  top: 0.4rem;
+}
+
+.link2>ul {
+  margin: 0.5rem 0;
+}
+
+.link2>ul>li>a {
+  position: relative;
+  line-height: 2.7rem;
+  color: #fff;
+  font-size: 0.8rem;
+  display: flex;
+  border-top: 2px dotted #657ea5;
+}
+
+.link2>ul>li:first-child>a {
+  border-top: none;
+}
+
+.link2>ul>li>a::after {
+  content: '\ea80';
+  font-family: 'xeicon';
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.link2>ul>li>a span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 1.5rem;
+}
+
+.link2>ul>li>a span::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 8px;
+  position: absolute;
+  background: rgba(132, 152, 183, 0.3);
+  bottom: 0.8rem;
+  left: 0;
+  z-index: 1;
+}
+
+.link2 .siteWrap {
+  position: relative;
+}
+
+.link2 .siteWrap:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.link2 .siteBtn {
+  position: relative;
+  display: table-cell;
+  width: 1%;
+}
+
+.link2 .siteBtn+.siteBtn button {
+  border-left: 1px solid #6c6c6e;
+}
+
+.link2 .siteBtn button {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  font-family: 'Pretendard';
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 3.5rem 0 1.5rem;
+  color: #222;
+  font-size: .8rem;
+  font-weight: 400;
+  text-align: left;
+  background: #fff;
+}
+
+.link2 .siteBtn button span {
+  position: absolute;
+  max-height: 2.25rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 3.5rem 0 1.5rem;
+}
+
+.link2 .siteBtn button:before {
+  width: 3rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  font-family: "xeicon";
+  content: "\e930";
+  background: #0a326f;
+  opacity: 0.5;
+  transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+}
+
+.link2 .siteBtn.on button:before {
+  content: "\e936";
+}
+
+.link2 .siteBtn div {
+  display: none;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 10000;
+  bottom: 2.5rem;
+  left: 0;
+  width: 100%;
+  max-height: 223px;
+  border: 1px solid #728197;
+  border-bottom: 0;
+}
+
+.link2 .siteBtn ul li {
+  border-top: 1px solid #5d6a77;
+  font-weight: 400;
+  font-size: 0.7rem;
+}
+
+.link2 .siteBtn ul li strong {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  background: #343b42;
+  color: #fff799;
+  opacity: 1;
+}
+
+.link2 .siteBtn ul li:first-child {
+  border: 0;
+}
+
+.link2 .siteBtn ul li ul {
+  border-top: 1px solid #5d6a77;
+}
+
+.link2 .siteBtn ul li a {
+  display: block;
+  overflow: hidden;
+  padding: 0.35rem 0.5rem;
+  background: #343b42;
+  color: #d4dde7;
+  opacity: 0.9;
+}
+
+/* 바로가기2:active */
+.link2>ul>li>a span::before {
+  transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+}
+
+.link2>ul>li>a:hover span::before,
+.link2>ul>li>a:focus span::before {
+  width: 100%;
+}
+
+.link2 .siteBtn ul li a:hover,
+.link2 .siteBtn ul li a:focus,
+.link2 .siteBtn ul li a:active {
+  opacity: 1;
+  color: #fff;
+}
+
+.link2 .siteBtn button,
+.link2 .siteBtn button:before {
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.link2>ul>li>a:hover::after,
+.link2>ul>li>a:focus::after {
+  animation-name: btn;
+  animation-duration: 0.2s;
+}
+
+@keyframes btn {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -0.1rem;
+  }
+
+  100% {
+    top: 0;
+  }
+}

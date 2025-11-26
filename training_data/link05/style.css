@@ -1,0 +1,141 @@
+.MC_box {
+  width: 1600px;
+  margin: 0 auto;
+  font-family: 'pretendard';
+}
+
+/* 타이틀 */
+.tit_wrap {
+  position: relative;
+}
+
+.tit_wrap .dot {
+  display: block;
+  color: #ac0707;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.tit_wrap h3.tit {
+  font-size: 3rem;
+  color: #111;
+  font-weight: 800;
+}
+
+.tit_wrap .txt {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1.9rem;
+  line-height: 1.5rem;
+}
+
+/* 더보기 */
+.btn_more {
+  position: absolute;
+  font-size: 0.9rem;
+  color: #111;
+  font-weight: 500;
+}
+
+.btn_more i {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.3rem;
+  background: #111;
+  border: 2px solid #111;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+/* 퀵메뉴2 */
+.Quick_Menu2 .tit_wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.Quick_Menu2 ul {
+  display: flex;
+  width: calc(100% + 2.5rem);
+  margin-left: -1.25rem;
+  margin-top: 4rem;
+}
+
+.Quick_Menu2 ul li {
+  flex: 1;
+  padding: 0 1.25rem;
+}
+
+.Quick_Menu2 ul li a {
+  position: relative;
+  display: block;
+  height: 16rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding: 3.7rem 2.3rem 2.75rem;
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.Quick_Menu2 ul li a::before {
+  content: "\e907";
+  position: absolute;
+  bottom: 2.75rem;
+  left: 2.3rem;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'xeicon';
+  transform: rotate(-45deg);
+}
+
+.Quick_Menu2 ul li:nth-child(odd) a {
+  background-color: #091f42;
+}
+
+.Quick_Menu2 ul li:nth-child(even) a {
+  background-color: #0d326f;
+}
+
+.Quick_Menu2 ul li:nth-child(1) a {
+  background-image: url('/upload/cntntsFile/uimoa/img_8c36b15d-1563-4d11-8eb9-631844b4458f1716787307316.png');
+}
+
+.Quick_Menu2 ul li:nth-child(2) a {
+  background-image: url('/upload/cntntsFile/uimoa/img_53d45fc9-2aac-4f29-9d48-31162e35789e1716787307316.png');
+}
+
+.Quick_Menu2 ul li:nth-child(3) a {
+  background-image: url('/upload/cntntsFile/uimoa/img_6958d824-3933-46b6-b674-a7499319f5791716787307316.png');
+}
+
+.Quick_Menu2 ul li:nth-child(4) a {
+  background-image: url('/upload/cntntsFile/uimoa/img_c1930bc3-05f3-4583-8bc6-99f5b113c0651716787307316.png');
+}
+
+.Quick_Menu2 ul li a .tit {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.Quick_Menu2 ul li a .txt {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+  margin-top: 1.1rem;
+  word-break: keep-all;
+}
+
+/* 퀵메뉴2 : active */
+.Quick_Menu2 ul li a:hover,
+.Quick_Menu2 ul li a:focus {
+  transform: translateY(-2rem);
+  box-shadow: 10px 10px 20px rgba(40, 40, 40, 0.25);
+}
+
+.Quick_Menu2 ul li a {
+  transition: all 0.3s;
+}

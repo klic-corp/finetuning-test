@@ -1,0 +1,180 @@
+.MC_box3 {
+  position: relative;
+  width: 800px;
+  padding: 60px;
+  margin: 0 auto;
+  background: url('/upload/cntntsFile/uimoa/img_6a097344-f9b0-4208-adad-69932e40f21e1716775328639.png') no-repeat right / cover;
+}
+
+/* 퀵메뉴1 */
+
+/* 퀵메뉴1 */
+.Quick_Menu1 {
+  position: relative;
+}
+
+.Quick_Menu1 .tabBtn ul {
+  width: calc(100% + 1.7rem);
+  margin-left: -0.85rem;
+  font-size: 0;
+}
+
+.Quick_Menu1 .tabBtn li {
+  display: inline-block;
+  width: calc(100% / 3);
+  padding: 0 0.85rem;
+}
+
+.Quick_Menu1 .tabBtn li+li {
+  margin-top: 1.5rem;
+}
+
+.Quick_Menu1 .tabBtn li:nth-child(2),
+.Quick_Menu1 .tabBtn li:nth-child(3) {
+  margin-top: 0;
+}
+
+.Quick_Menu1 .tabBtn li a {
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.Quick_Menu1 .tabBtn li a .img {
+  width: 2.85rem;
+  height: 2.55rem;
+  overflow: hidden;
+  background-position: top;
+}
+
+.Quick_Menu1 .tabBtn li a .img img {
+  width: 100%;
+}
+
+.Quick_Menu1 .tabBtn li a .txt {
+  margin-top: 0.7rem;
+  text-align: center;
+}
+
+.Quick_Menu1 .tabCon .listBox {
+  display: none;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.Quick_Menu1 .tabCon .listBox ul {
+  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.Quick_Menu1 .tabCon .listBox ul li {
+  width: calc(100% / 4);
+  display: inline-block;
+  padding: 0.5rem 0.6rem;
+  vertical-align: top;
+}
+
+.Quick_Menu1 .tabCon .listBox ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: #f1f1f1;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  color: #111;
+  text-align: center;
+}
+
+.Quick_Menu1 .tabCon .listBox ul li a .img {
+  width: 2.3rem;
+  height: 2.1rem;
+  overflow: hidden;
+}
+
+.Quick_Menu1 .tabCon .listBox ul li a .img img {
+  width: 100%;
+}
+
+.Quick_Menu1 .tabCon .listBox ul li a .txt {
+  margin-top: 0.7rem;
+  padding: 0 1rem;
+  word-break: keep-all;
+}
+
+.Quick_Menu1 .tabCon .tabConCls {
+  position: absolute;
+  bottom: -2.3rem;
+  right: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.Quick_Menu1 .tabCon .tabConCls i {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+/* 퀵메뉴1 : active */
+.Quick_Menu1 .tabBtn li a:hover,
+.Quick_Menu1 .tabBtn li a:focus {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #111;
+  font-weight: 700;
+}
+
+.Quick_Menu1 .tabBtn li a:hover .img img,
+.Quick_Menu1 .tabBtn li a:focus .img img {
+  transform: translateY(-2.55rem);
+}
+
+.Quick_Menu1 .tabCon .listBox.on {
+  display: block;
+  overflow: visible;
+  visibility: visible;
+}
+
+.Quick_Menu1 .tabCon .listBox ul li a:hover,
+.Quick_Menu1 .tabCon .listBox ul li a:focus {
+  background: #a40f16;
+  color: #fff;
+}
+
+.Quick_Menu1 .tabCon .listBox ul li a:hover .img img,
+.Quick_Menu1 .tabCon .listBox ul li a:focus .img img {
+  transform: translateY(-2.1rem);
+}
+
+.Quick_Menu1 .tabBtn li a,
+.Quick_Menu1 .tabBtn li a .img img,
+.Quick_Menu1 .tabCon .listBox ul li a,
+.Quick_Menu1 .tabCon .listBox ul li a .img img {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}

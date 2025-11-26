@@ -1,0 +1,210 @@
+.MC_box {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.MC_box4 {
+  position: relative;
+  height: 31.5rem;
+  width: 100%;
+  background: url('/upload/cntntsFile/uimoa/img_5e7f0841-dc82-44a0-bdc5-4567ef2118851716515698422.png') no-repeat fixed top center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.MC_box5 {
+  position: relative;
+  height: 27.25rem;
+  width: 100%;
+  background: url('/upload/cntntsFile/uimoa/img_5291ba1d-a20b-433b-9b28-9573d61cd2591716515698422.png') no-repeat fixed bottom right;
+  display: flex;
+}
+
+/* 바로가기_01 */
+.link01 {
+  width: 50%;
+  height: calc(100% - 5rem);
+  background-color: #fff;
+  padding: 5rem 1rem 1rem 4rem;
+  position: relative;
+}
+
+.link01 .logo_txt {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.link01 .logo_txt span {
+  margin-left: 0.5rem;
+}
+
+.link01 .tit {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.link01 .txt {
+  font-size: 0.9rem;
+  color: #666666;
+  word-break: keep-all;
+  margin-bottom: 2.5rem;
+  min-height: 2.5rem;
+}
+
+/* 바로가기_01 :scrollActive */
+.link01 * {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.link01 * {
+  animation: upAni 0.5s forwards ease;
+}
+
+@keyframes upAni {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 바로가기_02 */
+.link02 {
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 1rem 1rem 7rem;
+  position: relative;
+}
+
+.link02::after {
+  content: "";
+  width: 85px;
+  height: 389px;
+  position: absolute;
+  background: url("	/upload/cntntsFile/uimoa/img_b033e30b-6153-454e-997b-a533c85102511716515809319.png") no-repeat;
+  background-size: cover;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+}
+
+.link02 .logo_txt {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.link02 .logo_txt span {
+  margin-left: 0.5rem;
+}
+
+.link02 .tit {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.link02 .txt {
+  font-size: 0.9rem;
+  color: #b5b5b5;
+  word-break: keep-all;
+  margin-bottom: 2.5rem;
+  min-height: 2.5rem;
+}
+
+.link02 a.btn_detail {
+  border-color: #fff;
+}
+
+/* 바로가기_02 :scrollActive */
+.link02 * {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.link02 * {
+  animation: upAni 0.5s forwards ease;
+}
+
+/* btn 공통 */
+.btn_more i {
+  transition: all 0.3s;
+}
+
+.btn_more:hover i,
+.btn_more:focus i {
+  transform: rotate(180deg) scale(0.8);
+  color: #ad1d19;
+}
+
+a.btn_detail {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  width: 9.5rem;
+  height: 2.75rem;
+  word-break: keep-all;
+  padding: 0 1rem;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+a.btn_detail i {
+  position: relative;
+  margin-left: auto;
+  margin-bottom: 4px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+a.btn_detail span {
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+a.btn_detail::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  transition: all 0.5s;
+}
+
+/* btn:active */
+a.btn_detail:hover,
+a.btn_detail:hover i,
+a.btn_detail:focus,
+a.btn_detail:focus i {
+  color: #000;
+}
+
+a.btn_detail:focus::before,
+a.btn_detail:hover::before {
+  width: 20rem;
+  height: 20rem;
+  top: -5rem;
+}

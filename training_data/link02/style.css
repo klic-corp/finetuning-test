@@ -1,0 +1,172 @@
+.section04 .section-wrap .section-list {
+  height: 25rem;
+  background: #d8ccc3 url('/upload/cntntsFile/uimoa/img_c969cb91-0348-4d0b-ac0b-83ad9ba3444c1716958292805.png') no-repeat 50% 50%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section04 .section-wrap .section-list .section-title {
+  margin-bottom: 2rem;
+}
+
+.section04 .slider-wrap .control {
+  position: absolute;
+  top: 0rem;
+  right: 0;
+}
+
+.section04 .link-info {
+  position: relative;
+  width: 1400px;
+  background-color: #9e1914;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.section04 .link-info li {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 54px;
+}
+
+.section04 .link-info li .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section04 .link-info li .link a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.section04 .link-info li .txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin: 0 20px;
+  width: 100%;
+  font-size: 24px;
+}
+
+.section04 .link-info li .txt span {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section04 .link-info li .txt p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.section04 .link-info li .link a i {
+  font-size: 1.3rem;
+}
+
+.section04 .link-info li:first-child:after {
+  content: "";
+  width: 1px;
+  height: 70px;
+  background-color: #ffc3ae;
+  position: absolute;
+  top: calc(50% - 35px);
+  right: 0;
+  opacity: 0.7;
+}
+
+.section-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+}
+
+.section-title h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.8rem;
+}
+
+.section-title a {
+  position: relative;
+  text-indent: -9999px;
+  display: block;
+  right: -0.7rem;
+}
+
+.active .section-title h2 a {
+  position: absolute;
+  right: -1.5rem;
+  overflow: hidden;
+  display: block;
+  width: 18px;
+  height: 18px;
+  animation: rotateCircle 2.5s forwards ease-in-out;
+  text-indent: -9999px;
+  opacity: 1;
+}
+
+.section-title h2 a:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  height: 1rem;
+  width: 3px;
+  background: #000;
+  content: "";
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg) translate(-50%, -50%);
+}
+
+.section-title h2 a:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 1rem;
+  height: 3px;
+  background: #000;
+  content: "";
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg) translate(-50%, -50%);
+}
+
+.section-title h2 strong {
+  text-transform: uppercase;
+  color: #9e1914;
+  font-weight: 800;
+}
+
+.section-title p {
+  flex: 1 1 100%;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
