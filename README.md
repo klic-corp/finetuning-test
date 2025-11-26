@@ -1,6 +1,6 @@
-# CodeLlama 7B Fine-tuning Guide
+# UI모아 Fine-tuning Guide
 
-이 프로젝트는 HTML, CSS, JavaScript 코드를 학습시키기 위한 CodeLlama 7B 파인튜닝 프로그램입니다.
+UI 모아의 HTML, CSS, JavaScript 코드를 학습시키기 위한 CodeLlama 7B 파인튜닝 프로그램입니다.
 
 ## 주요 기능
 
@@ -10,14 +10,6 @@
 - **자동 프롬프트 생성**: 학습 데이터를 instruction 형식으로 자동 변환
 
 ## 필수 요구사항
-
-### 하드웨어
-- **GPU**: NVIDIA GPU (최소 12GB VRAM 권장)
-  - RTX 3090/4090 (24GB) - 이상적
-  - RTX 3080/A4000 (16GB) - 권장
-  - RTX 3060 (12GB) - 최소 사양
-- **RAM**: 32GB 이상 권장
-- **저장공간**: 최소 50GB 여유 공간
 
 ### 소프트웨어
 - Python 3.10 이상
@@ -163,7 +155,7 @@ tokenizer = AutoTokenizer.from_pretrained("./codellama_7b_finetuned")
 
 # 코드 생성
 prompt = """### Instruction:
-Write a HTML code for contact form.
+이름, 연락처, 이메일, 문의사항이 있는 폼을 만들어줘.
 
 ### Input:
 Create HTML code following best practices.
@@ -191,22 +183,6 @@ print(result)
 - **num_epochs**: 전체 데이터를 학습할 횟수 [3-5]
 - **max_seq_length**: 최대 토큰 길이 [512, 1024, 2048]
 
-## 성능 최적화 팁
-
-1. **배치 크기 조정**: GPU 메모리를 최대한 활용하되 OOM 에러 방지
-2. **그래디언트 누적**: 작은 배치 크기로도 큰 효과적 배치 크기 달성
-3. **Mixed Precision**: FP16 사용으로 메모리 및 속도 개선
-4. **데이터 전처리**: 너무 긴 파일은 분할 또는 제외
-5. **체크포인트**: 정기적으로 저장하여 중단 시 재개 가능
-
-## 예상 학습 시간
-
-데이터 크기 및 하드웨어에 따라 다르지만:
-
-- **10,000 파일** (RTX 4090): 약 2-4시간
-- **50,000 파일** (RTX 4090): 약 8-12시간
-- **100,000+ 파일** (RTX 4090): 1-2일
-
 ## 문제 해결
 
 ### CUDA Out of Memory
@@ -229,20 +205,9 @@ max_seq_length=1024
 - Learning rate 조정
 - LoRA rank 증가
 
-## 주의사항
-
-1. **라이선스**: CodeLlama 모델의 라이선스를 확인하고 준수하세요
-2. **저작권**: 학습 데이터의 저작권을 확인하세요
-3. **GPU 메모리**: 학습 중 GPU 온도와 메모리 모니터링
-4. **백업**: 중요한 체크포인트는 별도 백업
-
 ## 참고 자료
 
 - [CodeLlama Paper](https://arxiv.org/abs/2308.12950)
 - [LoRA Paper](https://arxiv.org/abs/2106.09685)
 - [Hugging Face Transformers](https://huggingface.co/docs/transformers)
 - [PEFT Documentation](https://huggingface.co/docs/peft)
-
-## 라이선스
-
-이 프로젝트는 MIT 라이선스를 따릅니다.
