@@ -8,7 +8,7 @@ import json
 import torch
 from pathlib import Path
 from typing import List, Dict, Optional
-from dataclasses import dataclass
+from dataclasses import dataclassD
 from torch.utils.data import Dataset, DataLoader
 from transformers import (
     AutoTokenizer,
@@ -227,7 +227,7 @@ class CodeLlamaFineTuner:
             quantization_config=bnb_config,
             device_map="auto",
             trust_remote_code=True,
-            torch_dtype=torch.float16,
+            dtype=torch.float16,
             low_cpu_mem_usage=True,  # CPU 메모리 사용 최적화
             max_memory={0: "13GB"},  # GPU 메모리 제한 설정
         )
