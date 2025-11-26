@@ -8,7 +8,7 @@ import json
 import torch
 from pathlib import Path
 from typing import List, Dict, Optional
-from dataclasses import dataclassD
+from dataclasses import dataclass
 from torch.utils.data import Dataset, DataLoader
 from transformers import (
     AutoTokenizer,
@@ -205,8 +205,11 @@ class CodeLlamaFineTuner:
         self.tokenizer.pad_token = self.tokenizer.eos_token
         self.tokenizer.padding_side = "right"
         
-        # 양자화 설정 (메모리 효율성)
-        if self.config.use_4bit:
+        # CUDA 사용 가능 여부 확인
+        use_cuda = torch.cuda.is_available()
+        
+        # 양자화 설정 (메모리 효율성) - CUDA가 있을 때만 4bit 사용
+        if self.config.use_4bit and use_cuda:
             bnb_config = BitsAndBytesConfig(
                 load_in_4bit=True,
                 bnb_4bit_use_double_quant=True,
@@ -214,30 +217,46 @@ class CodeLlamaFineTuner:
                 bnb_4bit_compute_dtype=torch.float16
             )
         else:
+            if self.config.use_4bit:
+                logger.warning("CUDA를 사용할 수 없어 4bit 양자화를 비활성화합니다.")
             bnb_config = None
         
         # 메모리 정리
-        if torch.cuda.is_available():
+        if use_cuda:
             torch.cuda.empty_cache()
         
+        # 모델 로드 설정
+        model_kwargs = {
+            "trust_remote_code": True,
+            "low_cpu_mem_usage": True,
+        }
+        
+        if use_cuda:
+            model_kwargs.update({
+                "device_map": "auto",
+                "quantization_config": bnb_config,
+                "dtype": torch.float16,
+                "max_memory": {0: "13GB"}
+            })
+        else:
+            model_kwargs.update({
+                "device_map": "cpu",
+                "dtype": torch.float32
+            })
+
         # 모델 로드
         logger.info("모델 다운로드 및 로딩 중... (시간이 걸릴 수 있습니다)")
         self.model = AutoModelForCausalLM.from_pretrained(
             self.config.model_name,
-            quantization_config=bnb_config,
-            device_map="auto",
-            trust_remote_code=True,
-            dtype=torch.float16,
-            low_cpu_mem_usage=True,  # CPU 메모리 사용 최적화
-            max_memory={0: "13GB"},  # GPU 메모리 제한 설정
+            **model_kwargs
         )
         
         # 메모리 정리
-        if torch.cuda.is_available():
+        if use_cuda:
             torch.cuda.empty_cache()
         
         # LoRA 설정
-        if self.config.use_4bit:
+        if self.config.use_4bit and use_cuda:
             self.model = prepare_model_for_kbit_training(self.model)
         
         lora_config = LoraConfig(
