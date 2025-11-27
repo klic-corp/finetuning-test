@@ -34,9 +34,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ### 디렉토리 구조
 
-학습 데이터를 다음과 같은 구조로 준비하세요:
-
-**참고:** HTML, CSS, JS 파일이 모두 필요한 것은 아닙니다. 하나 이상의 파일 타입만 있어도 학습 가능합니다.
+학습 데이터를 다음과 같은 구조로 배치합니다.
 
 ```
 training_data/
@@ -85,7 +83,7 @@ python tuning.py
 
 ### 2. 설정 커스터마이징
 
-`tuning.py`의 `main()` 함수에서 설정을 수정하세요:
+`tuning.py`의 `main()` 함수에서 설정을 할 수 있습니다.
 
 ```python
 config = FineTuningConfig(
